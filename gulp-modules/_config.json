@@ -1,0 +1,14 @@
+{
+  "watchPaths": {
+    "webpack": "src/**/*.js"
+  },
+  "tasksPaths": {
+    "webpack": {
+      "src": "src/**/*.js",
+      "dst": "public"
+    }
+  },
+  "taskNames": {
+    "webpack": "webpack"
+  }
+}
