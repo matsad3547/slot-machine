@@ -1,20 +1,22 @@
 'use strict';
 
 const gulp = require('gulp');
-const gutil = require("gulp-util");
+const notifier = require('node-notifier');
+const gUtil = require("gulp-util");
 const webpack = require('webpack');
-const webpackConfig = require("../webpack.config.js");
 
 
-module.exports = function() {
+module.exports = function(options) {
 
   return function(callback) {
-    let myConfig = Object.create(webpackConfig);
+    let myConfig = Object.create(options.webpackConfig);
 
     webpack(myConfig, function(err, stats) {
+      if(err) {
+        throw new gUtil.PluginError("webpack:build", err);
+      }
 
-      if(err) throw new gutil.PluginError("webpack:build", err);
-      gutil.log("[webpack:build]", stats.toString({
+      gUtil.log("[webpack:build]", stats.toString({
         colors: true
       }));
 

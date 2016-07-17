@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title>Amazing slot machine</title>
+  <link
+      href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic'
+      rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="public/main.css">
 
 </head>
 <body>
 
-    <script src="public/bundle.js"></script>
+<div class="title">
+  <p>Welcome to</p>
+
+  <h1>Amazing slot machine!</h1>
+</div>
+
+<div class="machine">
+  <div class="machine__reels">
+    <div data-reel="0" class="machine__reel"></div>
+    <div data-reel="1" class="machine__reel"></div>
+    <div data-reel="2" class="machine__reel"></div>
+  </div>
+
+  <div class="machine__controls">
+    <button id="start" class="machine__start">start</button>
+  </div>
+</div>
+
+<script src="public/slot-machine.js"></script>
 </body>
 </html>

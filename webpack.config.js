@@ -4,10 +4,10 @@ const path = require('path');
 
 module.exports = {
   // context: __dirname + "/app",
-  entry: "./src/home",
+  entry: "./src/js/main",
   output: {
     path: "./public",
-    filename: "bundle.js",
+    filename: "slot-machine.js",
     library: 'home'
   },
   module : {
